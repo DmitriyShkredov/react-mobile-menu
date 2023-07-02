@@ -1,0 +1,46 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3.125rem 1.25rem;
+}
+
+.section svg {
+  display: block;
+  margin: 4px;
+  width: 64px;
+  height: 64px;
+  transition: fill 0.3s;
+}
+
+.main-icon {
+  fill: blue;
+}
+
+.main-icon:hover {
+  fill: rgb(16, 16, 100);
+}
+
+.lost-icon {
+  fill: rgb(138, 138, 138);
+}
+
+.lost-icon:hover {
+  fill: rgb(68, 68, 68);
+}
+
+.new-icon {
+  fill: orange;
+}
+
+.new-icon:hover {
+  fill: rgb(138, 90, 0);
+}
