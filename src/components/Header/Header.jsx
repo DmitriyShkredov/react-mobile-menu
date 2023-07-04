@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ReactComponent as Icon } from "./menuIcon.svg";
+import { MenuButton } from "../MenuButton/MenuButton";
 import "./Header.css";
 
 export const Header = () => {
@@ -17,9 +17,7 @@ export const Header = () => {
           <li className="header__nav-item">logIn</li>
         </ul>
       </nav>
-      <button className="header__menu-button" onClick={() => setOpen(!isOpen)}>
-        <Icon />
-      </button>
+      <MenuButton isActive={isOpen} onClick={() => setOpen(!isOpen)} />
     </header>
   );
 };

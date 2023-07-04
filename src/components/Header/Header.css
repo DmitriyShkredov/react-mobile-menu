@@ -38,10 +38,6 @@
   margin-left: 20px;
 }
 
-.header__menu-button {
-  display: none;
-}
-
 @media (max-width: 576px) {
   .header__nav {
     position: fixed;
@@ -79,15 +75,5 @@
 
   .header__nav-item:nth-child(n + 2) {
     margin-left: 0;
-  }
-
-  .header__menu-button {
-    display: block;
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    padding: 0;
-    border: 0;
   }
 }
