@@ -1,9 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MenuButton } from "../MenuButton/MenuButton";
 import "./Header.css";
 
 export const Header = () => {
   const [isOpen, setOpen] = useState();
+
+  useEffect(() => {
+    let startTouchX = 0;
+    let endTouchX = 0;
+    let startTouchY = 0;
+    let endTouchY = 0;
+
+    document.addEventListener("touchstart", (event) => {
+      startTouchX = event.changedTouches[0].pageX;
+      startTouchY = event.changedTouches[0].pageY;
+    });
+
+    document.addEventListener("touchend", (event) => {
+      endTouchX = event.changedTouches[0].pageX;
+      endTouchY = event.changedTouches[0].pageY;
+      if (
+        startTouchX < 100 &&
+        Math.abs(endTouchY - startTouchY) < 40 &&
+        endTouchX > startTouchX
+      )
+        setOpen(true);
+      if (
+        startTouchX < 240 &&
+        Math.abs(endTouchY - startTouchY) < 40 &&
+        endTouchX < startTouchX
+      )
+        setOpen(false);
+    });
+  }, []);
 
   return (
     <header className="header">
