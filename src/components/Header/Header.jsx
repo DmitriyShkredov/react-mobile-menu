@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { MenuButton } from "../MenuButton/MenuButton";
+import { useClickOutside } from "../../hooks/useClickOutside";
 import "./Header.css";
 
 export const Header = () => {
   const [isOpen, setOpen] = useState();
+  const menuRef = useRef(null);
+  useClickOutside(menuRef, () => {
+    setOpen(false);
+    // if (isOpen) setTimeout(() => setOpen(false), 50);
+  });
 
   useEffect(() => {
     let startTouchX = 0;
@@ -37,7 +43,7 @@ export const Header = () => {
   return (
     <header className="header">
       <span className="header__logo">Logo</span>
-      <nav className={`header__nav ${isOpen ? "active" : ""}`}>
+      <nav className={`header__nav ${isOpen ? "active" : ""}`} ref={menuRef}>
         <ul className="header__nav-list">
           <li className="header__nav-item">Main</li>
           <li className="header__nav-item">About</li>
