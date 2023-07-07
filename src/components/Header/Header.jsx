@@ -7,8 +7,7 @@ export const Header = () => {
   const [isOpen, setOpen] = useState();
   const menuRef = useRef(null);
   useClickOutside(menuRef, () => {
-    setOpen(false);
-    // if (isOpen) setTimeout(() => setOpen(false), 50);
+    if (isOpen) setTimeout(() => setOpen(false), 50);
   });
 
   useEffect(() => {
