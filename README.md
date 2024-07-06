@@ -2,6 +2,8 @@
 
 #### `Demo:` https://dmitriyshkredov.github.io/react-mobile-menu/
 
+#### `Телеграм:` [@tipichnyj_web_razrabotchik/5](https://t.me/tipichnyj_web_razrabotchik/5)
+
 #### `Video:` https://youtu.be/NhEtTFVkOdw
 
 #### `Video:` https://youtu.be/Rj5ttT9zCW4
